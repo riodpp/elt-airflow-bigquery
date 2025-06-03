@@ -27,6 +27,7 @@ The Terraform configuration creates the following GCP resources:
   - Integrated with Airflow DAGs for data pipeline
 
 ## Project Structure
+```
 terraform/
 ├── main.tf                                 # Main infrastructure resources
 ├── variables.tf                            # Variable definitions
