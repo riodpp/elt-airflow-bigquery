@@ -1,7 +1,4 @@
 
-## Terraform README
-
-```markdown:%2FUsers%2Friodpp%2FDocuments%2FFreelance%2FSharing%2Felt_airflow_bq%2Fterraform%2FREADME.md
 # Terraform Infrastructure for ELT Pipeline
 
 This Terraform configuration provisions the Google Cloud Platform infrastructure required for the ELT pipeline using Apache Airflow, Google Cloud Storage, and BigQuery.
