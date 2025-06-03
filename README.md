@@ -79,8 +79,16 @@ airflow/
      ```
 
 3. **Terraform**:
-   - Terraform >= 1.0
-   - Google Cloud Provider >= 4.0
+   - Terraform >= 1.10
+   - Google Cloud Provider >= 6.21.0
+
+4. **Astro**:
+   - Astro CLI installed:
+     ```bash
+     brew install astro@1.34.1
+     ```
+   - Installation for windows:
+     https://www.astronomer.io/docs/astro/cli/install-cli?tab=windowswithwinget#install-the-astro-cli
 
 ## Setup Resource using Terraform
 
@@ -109,6 +117,7 @@ terraform apply -var-file="variables.tfvars" --auto-apply
 
 ## Airflow Setup
 ### 1. Copy env file
+Create .env file and put your credential in it.
 ```bash
 cp airflow/learning-airflow/env_copy airflow/learning-airflow/.env
 ```
@@ -118,5 +127,22 @@ cp airflow/learning-airflow/env_copy airflow/learning-airflow/.env
 cd airflow/learning-airflow
 astro dev start
 ```
+
+## What I learned
+- How to use Terraform to provision GCP resources
+- How to use Airflow to create DAGs with Astronomer
+- Integrating Airflow with GCS and BigQuery
+- Utilize Asset aware scheduler
+- Utilize External Task Sensor
+- Utilize BigQuery Operators and Hooks
+- Generate syntehtic data using Python with Faker
+- Implement Incremental transformation using MERGE statement.
+
+## Possible Development
+- Add more DAGs for data transformation and loading
+- Implement more data transformations
+- Implement more data loading
+- Integrate with DBT
+- Integrate with more data resources
 
 
