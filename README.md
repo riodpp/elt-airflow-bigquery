@@ -1,30 +1,7 @@
 
-# Terraform Infrastructure for ELT Pipeline
+# Summary
 
-This Terraform configuration provisions the Google Cloud Platform infrastructure required for the ELT pipeline using Apache Airflow, Google Cloud Storage, and BigQuery.
-
-## Infrastructure Components
-
-The Terraform configuration creates the following GCP resources:
-
-### 1. BigQuery Dataset
-- **Resource**: `google_bigquery_dataset.staging_dataset`
-- **Dataset ID**: `staging_dataset`
-- **Purpose**: Staging area for raw data before transformation
-- **Location**: Configurable via `region` variable
-- **Features**:
-  - Table expiration: 1 hour (3600000 ms)
-  - Labels for resource management
-  - Friendly name and description
-
-### 2. Google Cloud Storage Bucket
-- **Resource**: `google_storage_bucket.ingestion_bucket`
-- **Bucket Name**: `ingestion-bucket-purwadika`
-- **Purpose**: Storage for raw data files from API extractions
-- **Features**:
-  - Uniform bucket-level access enabled
-  - Regional storage for cost optimization
-  - Integrated with Airflow DAGs for data pipeline
+This project is inspired by the project from https://www.astronomer.io/docs/learn/reference-architecture-elt-bigquery-dbt. In this project I utilize Astronomer and Airflow 3 to create DAG. I use Terraform to provision GCP resources.
 
 ## Project Structure
 ```
