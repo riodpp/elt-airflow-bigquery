@@ -1,0 +1,9 @@
+GCP_CONN_ID="google_cloud_default"
+AIRFLOW_CONN_GOOGLE_CLOUD_DEFAULT='{
+    "conn_type": "google_cloud_platform",
+    "extra": <copy_your_json_key>
+}'
+GCS_BUCKET_NAME="<your_bucket_name>"
+PROJECT_ID="<your_project_name>"
+TRANSFORMED_DATASET="<your_transformed_dataset_name>"
+STAGING_DATASET="<your_staging_dataset_name>"
